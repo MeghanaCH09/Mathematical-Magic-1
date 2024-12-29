@@ -1,0 +1,14 @@
+def binary_value(b):
+    binary = {'0': 0, '1': 1}
+    decimal_value = 0
+    
+    for i in range(len(b)):
+        if b[i] not in binary:
+            return "Invalid binary number"
+        
+        decimal_value = decimal_value * 2 + binary[b[i]]
+    
+    return decimal_value
+
+binaryint = input("Enter a binary number: ")
+print(f"The decimal form of {binaryint} is {binary_value(binaryint)}")
